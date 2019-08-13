@@ -31,7 +31,7 @@ function addQuote(e){
 
 
 function fetchAllQuotes(){
-    fetch("http://localhost:3000/quotes")
+    fetch("http://localhost:3000/quotes?_embed=likes")
     .then(res => res.json())
     .then(quotesArray =>{
         quotesArray.forEach((quote) => {
@@ -42,6 +42,7 @@ function fetchAllQuotes(){
 
 
 function renderQuotes(quote){
+    
     const quoteList = document.getElementById("quote-list")
     const quoteLi = document.createElement('li')
     const quoteBlock = document.createElement('blockquote')
@@ -49,7 +50,7 @@ function renderQuotes(quote){
     const quoteFoot = document.createElement("footer")
             const likeButton = document.createElement('button')
             const deleteButton = document.createElement('button')
-               
+                const qSpan = document.createElement('span')
 
     quoteLi.className = "quote-card"
     quoteBlock.className = "blockquote"
@@ -61,33 +62,25 @@ function renderQuotes(quote){
     quoteList.appendChild(quoteLi)
     quoteLi.appendChild(quoteBlock)
     quoteBlock.append(quoteP, quoteFoot, likeButton, deleteButton)
-       
-
+    
     quoteP.innerText = quote.quote
     quoteFoot.innerText = quote.author
     deleteButton.innerText = "Delete"
+    likeButton.innerText = `Likes: `
+    likeButton.appendChild(qSpan)
+    
+    if (quote.likes){
 
-     likeButton.innerText = "Likes:"
+     qSpan.innerText = `${quote.likes.length}`
+     debugger
+    }
+    else{
+        qSpan.innerText = "0"
+    }
     
      deleteButton.addEventListener("click", (e) => {deleteQuote(e, quote, quoteLi)})
     
       likeButton.addEventListener("click", (e) => {addLikes(e, quote, qSpan)})
-    // function getLikes(){
-    //     debugger
-    //     fetch("http://localhost:3000/likes")
-    //     .then(res => res.json())
-    //     .then(likesArray =>{
-    //         likesArray.forEach((like) => {
-    //             debugger
-    //             if (like.quoteId === quote.id){
-    //                 qSpan.innerText += 1
-    //             }
-    //             else{
-    //                 qSpan.innerText = 0
-    //             }
-    //         })
-    //     })
-    // }
         }
         
      function addLikes(e, quote, qSpan){
@@ -104,7 +97,6 @@ function renderQuotes(quote){
         .then(res => res.json())
         .then(() => { 
             let num = parseInt(qSpan.innerText) + 1
-           
             qSpan.innerText = num
         })
 
