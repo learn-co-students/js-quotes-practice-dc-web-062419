@@ -32,10 +32,12 @@ function createQuoteCard(quote) {
       </blockquote>
     </li>
   `;
-  quoteCard.querySelector('.btn-success').dataset.id = quote.id;
-  quoteCard.querySelector('.btn-success').addEventListener('click', likeQuote);
-  quoteCard.querySelector('.btn-danger').dataset.id = quote.id;
-  quoteCard.querySelector('.btn-danger').addEventListener('click', deleteQuote);
+  const likeButton = quoteCard.querySelector('.btn-success');
+  const deleteButton = quoteCard.querySelector('.btn-danger');
+  likeButton.addEventListener('click', likeQuote);
+  deleteButton.addEventListener('click', deleteQuote);
+  likeButton.dataset.id = quote.id;
+  deleteButton.dataset.id = quote.id;
   return quoteCard;
 }
 
@@ -48,10 +50,8 @@ async function likeQuote(e) {
     },
     body: JSON.stringify({ quoteId: parseInt(e.target.dataset.id, 10) }),
   });
-  debugger;
-  // this does not function is you click the actual number on the button
-  e.currentTarget.children[0].innerText =
-    parseInt(e.currentTarget.children[0].innerText, 10) + 1;
+  e.originalTarget.children[0].innerText =
+    parseInt(e.originalTarget.children[0].innerText, 10) + 1;
 }
 
 async function deleteQuote(e) {
