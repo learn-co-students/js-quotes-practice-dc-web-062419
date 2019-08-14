@@ -1,3 +1,10 @@
 #quote-list {
+  padding: 20px 0;
+  list-style: none
+}
+
+#quote-list li{
+  border:solid 1px #CCC;
+  margin: 10px 0;
   padding: 20px;
 }
