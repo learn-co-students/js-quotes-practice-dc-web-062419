@@ -7,8 +7,8 @@
     },
     {
       "id": 2,
-      "quote": "There are no secrets to success. It is the result of preparation, hard work, and learning from failure.",
-      "author": "Collin Powell"
+      "quote": "war is bad",
+      "author": "Colin Powell"
     },
     {
       "id": 5,
@@ -27,7 +27,7 @@
     },
     {
       "id": 8,
-      "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "quote": "I'm a butt",
       "author": "Winston Churchhill"
     },
     {
@@ -46,9 +46,34 @@
       "id": 11
     },
     {
-      "quote": "You're classic in the wrong way",
+      "quote": "I'm alright with a slow burn. Taking my time, let the world turn. ",
       "author": "Kacey Musgraves",
       "id": 13
+    },
+    {
+      "quote": "In a racist society it is not enough to be non-racist, we must be anti-racist.",
+      "author": "Angela Davis",
+      "id": 14
+    },
+    {
+      "quote": "It is in collectivities that we find reservoirs of hope and optimism.",
+      "author": "Angela Davis",
+      "id": 15
+    },
+    {
+      "quote": "But for a society build on exploitation, there is no greater threat than having no one left to oppress.",
+      "author": "NK Jemisin",
+      "id": 16
+    },
+    {
+      "quote": "So here is why I write what I do: We all have futures. We all have pasts. We all have stories. And we all, every single one of us, no matter who we are and no matter what’s been taken from us or what poison we’ve internalized or how hard we’ve had to work to expel it –  – we all get to dream.",
+      "author": "NK Jemisin",
+      "id": 17
+    },
+    {
+      "quote": "I tell my students, 'When you get these jobs that you have been so brilliantly trained for, just remember that your real job is that if you are free, you need to free somebody else. If you have some power, then your job is to empower somebody else. This is not just a grab-bag candy game.",
+      "author": "Toni Morrison",
+      "id": 18
     }
   ],
   "likes": [
@@ -64,6 +89,56 @@
     {
       "quoteId": 7,
       "id": 3
+    },
+    {
+      "quoteId": 5,
+      "createdAt": "",
+      "id": 4
+    },
+    {
+      "quoteId": 6,
+      "createdAt": "",
+      "id": 5
+    },
+    {
+      "quoteId": 2,
+      "createdAt": "",
+      "id": 6
+    },
+    {
+      "quoteId": 13,
+      "createdAt": "",
+      "id": 7
+    },
+    {
+      "quoteId": 11,
+      "createdAt": "",
+      "id": 8
+    },
+    {
+      "quoteId": 14,
+      "createdAt": "",
+      "id": 9
+    },
+    {
+      "quoteId": 16,
+      "createdAt": 1565869152000,
+      "id": 10
+    },
+    {
+      "quoteId": 15,
+      "createdAt": 1565869153000,
+      "id": 11
+    },
+    {
+      "quoteId": 17,
+      "createdAt": 1565869406000,
+      "id": 12
+    },
+    {
+      "quoteId": 18,
+      "createdAt": 1565869750000,
+      "id": 13
     }
   ]
 }
