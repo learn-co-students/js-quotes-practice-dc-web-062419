@@ -157,7 +157,7 @@ function patchQuote(updatedData, quoteId, quoteP, authorFooter, event) {
 
     fetch(`http://localhost:3000/quotes/${quoteId}`, configObject)
         .then(res => res.json())
-        .then(updated => {
+        .then(updated => { 
             quoteP.innerText = updated.quote
             authorFooter.innerText = updated.author
         })
