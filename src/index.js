@@ -168,9 +168,9 @@ function patchQuote(updatedData, quoteId, quoteP, authorFooter, event) {
 function buildEditForm(event){
     return `
     <label for="edit-quote">Edit Quote</label>
-    <input type="text" class="form-control" id="edit-quote" value="${event.target.parentNode.querySelector('p').innerText}" ></input><br>
+    <input type="text" id="edit-quote" value="${event.target.parentNode.querySelector('p').innerText}" ></input><br>
     <label for="edit-author">Edit Author</label>
-    <input type="text" class="form-control" id="edit-author" value="${event.target.parentNode.querySelector('footer').innerText}"></input>
+    <input type="text" id="edit-author" value="${event.target.parentNode.querySelector('footer').innerText}"></input>
     <input type="submit" class="btn btn-primary" id="edit-submit"></input>
     `  
 }
